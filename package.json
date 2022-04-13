@@ -1,0 +1,25 @@
+{
+  "name": "monorepo-pnpm-demo",
+  "version": "1.0.0",
+  "description": "从0到1搭建一个包含 vue2 app、vue3 app、react app、通用工具函数的monorepo",
+  "private": true,
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "app-vue2:dev": "pnpm serve --filter=\"app-vue2\"",
+    "app-vue3:dev": "pnpm dev --filter \"app-vue3\"",
+    "app-react:dev": "pnpm start --filter \"app-react\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shubenwuming/monorepo-pnpm-demo.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shubenwuming/monorepo-pnpm-demo/issues"
+  },
+  "homepage": "https://github.com/shubenwuming/monorepo-pnpm-demo#readme",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "utils": "workspace:*"
+  }
+}
