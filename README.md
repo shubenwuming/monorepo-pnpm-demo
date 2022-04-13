@@ -78,7 +78,7 @@ package.json中 scripts字段处理，这里就以本地启开发服务器为例
 
 ### 6：约束团队只用pnpm
 
-这一步骤可有可无，当你想约束团队只用pnpm安装依赖时，可以在package.json中配置`preinstall`
+当你想约束团队只用pnpm安装依赖时，可以在package.json中配置`preinstall`
 
 ```json
 {
@@ -96,11 +96,7 @@ package.json中 scripts字段处理，这里就以本地启开发服务器为例
 
 #### 7.2 放置到workspace的root中
 
-直接安装到根路径，使用的时候直接像用一个第三方npm包一样的使用`import {add} from 'utils'`，不用再考虑路劲
+root路径下命令行输入`pnpm add utils -w`，会直接安装到根路径，使用的时候直接像用一个第三方npm包一样的使用`import {add} from 'utils'`，不用再考虑路劲
 
-```shell
-pnpm add utils -w
-```
-
-上面这个命令行会在root 中 packages 中的 依赖相关的字段中生成。
+观察root 中 package.json 中的 依赖相关的字段中生成。
 
